@@ -9,3 +9,5 @@ sha512_func.py is the "original", heavily commented (in no small part to myself 
 sha512_func_noc.py is *almost* the same thing, but without the comments - some of it is so over-commented that it's kind of hard to actually read the code.
 
 sha512_compact.py is a refactored version with only four functions. The reason it is four instead of one is that all of them are of the form "f(x) = f( \[inline processing of x\] ) if not \[end condition\] else x". It's totally possible to refactor two functions like that into a single one (and I may do so), but the complexity goes up a bit, and the (already abysmal) readabillity is even further destroyed.
+
+sha512_onefunc.py So.. This is a single function (still pure, stateless, immutable) version. It's kind of approaching stupid language tricks, unless you dig lambda calculus, in which case it kind of matters. It's not a very illustrative example, but.. I've really never felt comfortable around the Y-comnbiner, even back when I should have been, and at least for the mnomnent it's all so clear to me now. So I had to finish it. :-)
